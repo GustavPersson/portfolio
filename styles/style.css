@@ -67,23 +67,97 @@ canvas {
   outline:0;
 }
 
+.fp-tableCell {
+  display: flex;
+}
+
+.splash {
+  height: 100vh;
+  background: black;
+  color: white;
+}
+
+.about {
+  height: 100vh;
+  background: DarkSlateGrey;
+  display: flex;
+}
+
+.projects .left,
+.about .left {
+  height: 100%;
+  width: 50vw;
+  flex: 0 0 50vw;
+  display: inline-block;
+}
+
+.projects .right,
+.about .right {
+  height: 100%;
+  width: 50vw;
+  flex: 0 0 50vw;
+  overflow-x: scroll;
+  display: inline-block;
+  position: relative;
+}
+
+.slide .content {
+  overflow-x: scroll;
+}
+
+.slide.first {
+  background: url("/images/MedlemskortHM.png");
+  background-color: PaleVioletRed;
+  background-size: cover;
+}
+
+.slide.second {
+  background-color: DarkBlue;
+}
+
+.slide.third {
+  background-color: Salmon;
+}
+
+.slide.fourth {
+  background: Sienna;
+}
+
+.about .right {
+  background-color: DeepSkyBlue;
+}
+
+.projects {
+  height: 100vh;
+  background: FireBrick;
+  display: flex;
+}
+
+.projects .right {
+
+}
+
+.projects .right .section {
+  height: 100vh;
+}
+
 
 #contact a {
 font-size: 16px;
 }
 
-#nav {
+.nav {
   background-color: white;
-  position:fixed;
+  position: absolute;;
   width: 100%;
-  top: 0;
+  bottom: 0;
   height: 2.5rem;
   line-height: 3rem;
   font-size: 1.4rem;
   z-index: 2;
 }
 
-#nav a {
+.nav a {
   margin: 0 15px;
 }
 
