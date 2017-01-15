@@ -2,12 +2,18 @@ $(document).ready(function() {
   console.log("Document ready");
 
   $('.wrapper').fullpage({
-    normalScrollElements: '.projects .right'
+    normalScrollElements: '.projects .right, .parallax',
+    verticalCentered: false,
+    scrollBar: true,
+    autoScrolling: true,
+    anchors: ['home', 'project', 'about-me', 'contact']
   });
 
   $('.slide').click(function(event) {
     console.log(this);
     $(this).find('.content').show();
   });
+
+  $('.parallax').enllax();
 
 });

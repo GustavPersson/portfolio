@@ -1,11 +1,5 @@
 /* Reset Styles */
 
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  /* ie8 */
-}
 
 html {
   font-size: 12px;
@@ -59,22 +53,28 @@ p {
 
 a, a:link, a:visited, a:hover {
   text-decoration: none;
-  color: #393939;
-
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
 }
 
 canvas {
   outline:0;
 }
 
-.fp-tableCell {
-  display: flex;
+h1.name {
+  text-align: center;
 }
 
 .splash {
   height: 100vh;
+  display: flex;
   background: black;
   color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  background-color: #FEDCC8;
 }
 
 .about {
@@ -83,12 +83,14 @@ canvas {
   display: flex;
 }
 
-.projects .left,
-.about .left {
+.left {
   height: 100%;
   width: 50vw;
   flex: 0 0 50vw;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 12px;
 }
 
 .projects .right,
@@ -147,14 +149,16 @@ font-size: 16px;
 }
 
 .nav {
-  background-color: white;
-  position: absolute;;
-  width: 100%;
+  text-align: center;
+  width: 75%;
   bottom: 0;
   height: 2.5rem;
   line-height: 3rem;
   font-size: 1.4rem;
   z-index: 2;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  mix-blend-mode: difference;
 }
 
 .nav a {
@@ -214,50 +218,6 @@ font-size: 16px;
   transition: opacity .25s ease-in-out;
 }
 
-.project-wrapper > a > img {
-  transition: opacity .25s ease-in-out;
-  height: 400px;
-  width: 225px;
-}
-
-.project-wrapper:hover > a > img {
-  opacity: 0.5;
-}
-
-.project-wrapper:hover > a > .project-info-text {
-  opacity: 1;
-}
-
-/*Carousel*/
-.project-carousel .owl-controls .owl-buttons .owl-prev,
-.project-carousel .owl-controls .owl-buttons .owl-next {
-    color: #a2a2a2;
-    font-family: 'blockshop-icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;ss
-    -webkit-font-smoothing: antialiased;
-    font-size: 35px;
-    position: absolute;
-    top: 50%;
-    background: none;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    opacity: 0.8;
-}
-
-.project-carousel .owl-controls .owl-buttons .owl-prev {
-  left: 0;
-  margin: 0 0 0 -40px;
-}
-
-.project-carousel .owl-controls .owl-buttons .owl-next {
-  right: 0;
-  margin: 0 -40px 0 0;
-}
-
 .header-carousel img {
   display: block;
   width: 100%;
@@ -273,5 +233,88 @@ font-size: 16px;
   .header-name {
     position: absolute;
     bottom: 20px;
+  }
 }
+
+.parallax {
+  height: 100vh;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallax__cover {
+  background: #2D112B;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 200vh;
+  z-index: 2;
+}
+
+.parallax__layer--0 {
+  /*background-image: url('/images/layer_0.png');*/
+  -webkit-transform: translateZ(-300px) scale(4);
+          transform: translateZ(-300px) scale(4);
+}
+
+.parallax__layer--1 {
+  /*background-image: url('/images/layer_1.png');*/
+  -webkit-transform: translateZ(-250px) scale(3.5);
+          transform: translateZ(-250px) scale(3.5);
+
+}
+
+.parallax__layer--2 {
+  /*background-image: url('/images/layer_2.png');*/
+  -webkit-transform: translateZ(-200px) scale(3);
+        transform: translateZ(-200px) scale(3);
+
+}
+
+.parallax__layer--3 {
+  /*background-image: url('/images/layer_3.png');*/
+  -webkit-transform: translateZ(-150px) scale(2.5);
+        transform: translateZ(-150px) scale(2.5);
+
+}
+.parallax__layer--4 {
+  /*background-image: url('/images/layer_4.png');*/
+  -webkit-transform: translateZ(-100px) scale(2);
+        transform: translateZ(-100px) scale(2);
+
+}
+.parallax__layer--5 {
+  /*background-image: url('/images/layer_5.png');*/
+  -webkit-transform: translateZ(-50px) scale(1.5);
+          transform: translateZ(-50px) scale(1.5);
+
+}
+.parallax__layer--6 {
+  /*background-image: url('/images/layer_6.png');*/
+  -webkit-transform: translateZ(0px) scale(1);
+          transform: translateZ(0px) scale(1);
+
 }
