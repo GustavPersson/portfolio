@@ -1,28 +1,26 @@
 $(document).ready(function() {
   console.log("Document ready");
 
-  $("#project-carousel").owlCarousel({
-    navigation: true,
-    pagination: false,
-    navigationText: ["<",">"],
-    autoHeight: true,
-    rewindNav: true,
-    scrollPerPage: true,
+  $('.wrapper').fullpage({
+    normalScrollElements: '.projects .right, .parallax',
+    verticalCentered: false,
+    scrollBar: true,
+    autoScrolling: true,
+    anchors: ['home', 'about-me', 'project', 'end']
   });
 
-  $("#header-carousel").owlCarousel({
-    singleItem: true,
-    autoHeight: true,
-    itemsScaleUp: true
+  $('.slide').click(function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $(this).find('.content').slideDown(600).addClass('displayed');
   });
 
-  $(".menu a").click(function(e) {
-    e.preventDefault(); //gör inte defultgrejen, låter bli att göra det du klickar på
-    var element = $(e.currentTarget);
-    var target = $(element.attr("href"));
-    $('html, body').animate({
-        scrollTop: $(target).offset().top
-    }, 1500);
-  });
+  $('.close').click(function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $(this).parents('.content').slideUp(400).removeClass('displayed');
+  })
+
+  $('.parallax').enllax();
 
 });
