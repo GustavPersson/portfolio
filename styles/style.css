@@ -63,6 +63,7 @@ canvas {
 
 h1.name {
   text-align: center;
+  font-size: 10rem;
 }
 
 .splash {
@@ -74,13 +75,34 @@ h1.name {
   justify-content: space-between;
   padding: 12px;
   position: relative;
+  background-color: #23231A;
+}
+
+
+.splash--parallax {
   background-color: #FEDCC8;
 }
 
 .about {
   height: 100vh;
-  background: DarkSlateGrey;
+  background: #3D5A6C;
   display: flex;
+}
+
+.about .right {
+  padding: 84px;
+}
+
+.face {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.face img {
+  transform: translateX(50%) translateY(50%);;
+  width: 160px;
 }
 
 .left {
@@ -91,6 +113,7 @@ h1.name {
   justify-content: space-between;
   flex-direction: column;
   padding: 12px;
+  position: relative;
 }
 
 .projects .right,
@@ -105,28 +128,34 @@ h1.name {
 
 .slide .content {
   overflow-x: scroll;
+  display: none;
+}
+
+.slide .content.displayed {
+  cursor: default;
 }
 
 .slide.first {
-  background: url("/images/MedlemskortHM.png");
-  background-color: PaleVioletRed;
-  background-size: cover;
+  background: url(/images/MedlemskortHM.png);
+  background-color: #FEFEFE;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slide.second {
-  background-color: DarkBlue;
+  background-color: #FEFEFE;
 }
 
 .slide.third {
-  background-color: Salmon;
+  background-color: #FEFEFE;
 }
 
 .slide.fourth {
-  background: Sienna;
+  background-color: #FEFEFE;
 }
 
 .about .right {
-  background-color: DeepSkyBlue;
+  background-color: #FEFEFE;
 }
 
 .projects {
@@ -136,13 +165,21 @@ h1.name {
 }
 
 .projects .right {
-
+  cursor: pointer;
 }
 
 .projects .right .section {
   height: 100vh;
 }
 
+.close {
+  position: absolute;
+  right: 41px;
+  top: 14px;
+  font-size: 32px;
+  color: #23231A;
+  cursor: pointer;
+}
 
 #contact a {
 font-size: 16px;
@@ -157,8 +194,7 @@ font-size: 16px;
   font-size: 1.4rem;
   z-index: 2;
   margin: 0 auto;
-  color: rgb(0, 0, 0);
-  mix-blend-mode: difference;
+  color: #FEFEFE;
 }
 
 .nav a {
@@ -185,6 +221,7 @@ font-size: 16px;
   vertical-align: top;
   padding: 1rem;
   width: 100%;
+  position: relative;
 }
 .project .image-container {
   display: flex;
@@ -271,7 +308,7 @@ font-size: 16px;
   left: 0;
   right: 0;
   height: 200vh;
-  z-index: 2;
+  z-index: 8;
 }
 
 .parallax__layer--0 {
@@ -317,4 +354,18 @@ font-size: 16px;
   -webkit-transform: translateZ(0px) scale(1);
           transform: translateZ(0px) scale(1);
 
+}
+
+
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #23231A;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #23231A transparent transparent;
 }

@@ -6,13 +6,20 @@ $(document).ready(function() {
     verticalCentered: false,
     scrollBar: true,
     autoScrolling: true,
-    anchors: ['home', 'project', 'about-me', 'contact']
+    anchors: ['home', 'about-me', 'project', 'end']
   });
 
   $('.slide').click(function(event) {
-    console.log(this);
-    $(this).find('.content').show();
+    event.stopPropagation();
+    event.preventDefault();
+    $(this).find('.content').slideDown(600).addClass('displayed');
   });
+
+  $('.close').click(function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $(this).parents('.content').slideUp(400).removeClass('displayed');
+  })
 
   $('.parallax').enllax();
 
