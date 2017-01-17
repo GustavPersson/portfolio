@@ -54,7 +54,6 @@ p {
 a, a:link, a:visited, a:hover {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
 }
 
 canvas {
@@ -126,6 +125,93 @@ h1.name {
   position: relative;
 }
 
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.background .project--title {
+  position: absolute;
+  top: 20px;
+  z-index: 3;
+  font-size: 72px;
+  text-align: center;
+  margin: 0 auto;
+  background: #fefefe;
+  width: 100%;
+}
+
+.more {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #23231A;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  z-index: 3;
+}
+
+.background:hover > .more {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.displayed {
+  cursor: default;
+}
+
+.slide.displayed {
+
+}
+
+.slide.displayed .background:hover > .more {
+  opacity: 0;
+}
+
+
+.content {
+
+}
+
+.slide {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  transition: transform 2.4s ease;
+}
+
+.slide .background .background__image {
+  width: 100%;
+  transition: transform 6.6s ease-in-out;
+}
+
+.slide.lights .background .background__image {
+  width: 453px;
+}
+
+.slide .background .background__image:hover {
+  transform: scale(1.2);
+}
+
+.slide.displayed .background .background__image {
+  opacity: 0.6;
+  transition: none;
+}
+
+.slide.displayed .background .background__image:hover {
+  transform: scale(1);
+}
+
 .slide .content {
   overflow-x: scroll;
   display: none;
@@ -133,10 +219,10 @@ h1.name {
 
 .slide .content.displayed {
   cursor: default;
+  margin: 4px 45px 25px 45px;
 }
 
 .slide.first {
-  background: url(/images/MedlemskortHM.png);
   background-color: #FEFEFE;
   background-repeat: no-repeat;
   background-position: center;
@@ -164,8 +250,50 @@ h1.name {
   display: flex;
 }
 
+.projects.displayed .nav {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s linear;
+  bottom: 14px;
+  pointer-events: none;
+}
+
+.project-nav {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s linear;
+  bottom: 14px;
+}
+
+.project-nav a:active {
+  color: black;
+  font-weight: bolder;
+}
+
+
+.projects.displayed .project-nav {
+  opacity: 1;
+}
+
+.projects.displayed .right {
+  width: 80vw;
+}
+
+.projects.displayed .left {
+  width: 20vw;
+}
+
+
+
 .projects .right {
   cursor: pointer;
+  flex: 1 0 auto;
+  transition: width .6s ease-in-out;
+}
+
+.projects .left {
+  flex: 0 1 auto;
+  transition: width .6s ease-in-out;
 }
 
 .projects .right .section {
@@ -174,11 +302,23 @@ h1.name {
 
 .close {
   position: absolute;
-  right: 41px;
+  display: none;
+  right: 0px;
+  transform: translateX(50%);
+  z-index: 8;
   top: 14px;
   font-size: 32px;
   color: #23231A;
   cursor: pointer;
+  color: maroon;
+  background: white;
+  line-height: 3px;
+  border-radius: 100%;
+  height: 30px;
+}
+
+.close.displayed {
+  display: block;
 }
 
 #contact a {
@@ -222,7 +362,11 @@ font-size: 16px;
   padding: 1rem;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .project .image-container {
   display: flex;
   flex-direction: column;
@@ -285,6 +429,20 @@ font-size: 16px;
   margin-left: -50%;
   right: 0;
   bottom: 0;
+}
+
+.end__parallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.end__parallax a,
+.end__parallax h1 {
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
+  z-index: 2;
 }
 
 .parallax__layer {

@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Jennifer Martina Larsson.</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.css">
+  <link href="http://vjs.zencdn.net/5.3.0/video-js.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Default Theme -->
   <link rel="stylesheet" href="/styles/style.css">
@@ -31,7 +32,7 @@
     <section class="about section">
       <div class="left">
         <div>
-          Jennifer Larsson
+
         </div>
         <div class="face">
           <img src="/images/face.jpg" />
@@ -57,85 +58,110 @@
     </section>
     <section class="projects section">
       <div class="left">
-        projects
+        <div>
+
+        </div>
         <nav class="nav">
           <div class="menu">
             <div class="menu-buttons">
               <a href="#home" class="home-button">Start</a>
               <a href="#about-me" class="about-me-button">About Me</a>
               <a href="#project" class="project-button">Portfolio</a>
+            </div>
+          </div>
+        </nav>
+        <nav class="project-nav">
+          <div class="menu">
+            <div class="menu-buttons">
+              <a href="#project/0" class="home-button">Remember</a>
+              <a href="#project/1" class="about-me-button">Lights</a>
+              <a href="#project/2" class="project-button">project3</a>
               </div>
           </div>
         </nav>
+        <div class="close">
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
       </div>
       <div class="right">
           <div class="slide first">
-            <div class="content" style="display: none">
-              <article class="project">
-                <h2>Cardholder</h2>
-                <div class="close">
-                  <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </div>
-                <div class="image-container">
-                  <img src="/images/sketch.jpg" class="cardholder"/>
-                  <img src="/images/storyboard.png" class="cardholder"/>
-                  <img src="/images/MedlemskortHM2.jpg" class="cardholder"/>
-                  <img src="/images/addnewcard2.jpg" class="cardholder"/>
-                  <img src="/images/medlemskort2.jpg" class="cardholder"/>
-                  <img src="/images/scanner.jpg" class="cardholder"/>
-                  <img src="/images/zarameny2.jpg" class="cardholder"/>
-                </div>
-                <div>
-                  <p>
-                    During the Visual Communications course we got an assignment to create an App that used
-                    wearable technologies.
-                    <br>
-                    I decided to create a concept that took all of a user's membership cards
-                    and stored them all in one place, easily accessible through the user's phone.
-                    This allows for the user to not worry about carrying around all of their cards
-                    in their wallet, since most of them are commonly not used every day.
-                  </p>
-                  <p>
-                    The first step was to create the concept and to sketch it out. After that, I created a storyboard
-                    to display the flow of the application, and what the thought area of use is.
-                    The last step of this project was to create interface mock-ups with Illustrator and Photoshop.
-                  </p>
-                </div>
-              </article>
+            <div class="background">
+              <h2 class="project--title">Remember</h2>
+              <img class="background__image" src="/images/remember." />
+              <div class="more">
+                More
+              </div>
             </div>
-          </div>
-          <div class="slide second">
+
             <div class="content">
               <article class="project">
-                <a>
-                  <h2></h2>
-                  <video id="kalender" class="video-js" controls preload="auto" width="640" height="376"
-                    poster="/images/kalender.png" data-setup="{}">
-                    <source src="/images/kalender.mp4" type='video/mp4'>
-                  </video>
-
-                  <div>
-                    <p>
-                      The calendar app was built together with some classmates from Malmö Högskola, as a group assignment. We worked on the calender
-                      for 2 weeks.
-
-                      <br>
-                      The app is a basic christmas calendar that has recepies behind the hatches. The hatches are opened by clicking on them,
-                      and every ten minutes the current day's hatch will open and display today's recepie.
-                    </p>
-                  </div>
-                </a>
+                <p>
+                  Lights was a project that focused on designing with tangiability, and during it we came up with a concept for a hub that controls
+                  the user's home lighting, together with a companion application that lets the user remotely turn the lights off.
+                </p>
+                <p>
+                  We created the following video prototype to showcase the design.
+                </p>
+                <iframe id="ytplayer" type="text/html" width="640" height="360"
+                src="https://www.youtube.com/embed/754NgMEwpLw?autoplay=0"
+                frameborder="0"></iframe>
               </article>
             </div>
           </div>
-          <div class="slide third">Some section</div>
-          <div class="slide fourth">Some section</div>
+          <div class="slide second lights">
+            <div class="background">
+              <h2 class="project--title">Lights</h2>
+              <img class="background__image" src="/images/lights.jpeg" />
+              <div class="more">
+                More
+              </div>
+            </div>
+
+            <div class="content">
+              <article class="project">
+                <p>
+                  Lights was a project that focused on designing with tangiability, and during it we came up with a concept for a hub that controls
+                  the user's home lighting, together with a companion application that lets the user remotely turn the lights off.
+                </p>
+                <p>
+                  We created the following video prototype to showcase the design.
+                </p>
+                <iframe id="ytplayer" type="text/html" width="640" height="360"
+                src="https://www.youtube.com/embed/754NgMEwpLw?autoplay=0"
+                frameborder="0"></iframe>
+              </article>
+            </div>
+          </div>
+          <div class="slide third">
+            <div class="content">
+              <article class="project">
+              </article>
+            </div>
+          </div>
+          <div class="slide fourth">
+            <div class="content">
+              <article class="project">
+              </article>
+            </div>
+          </div>
+          <div class="slide fifth">
+            <div class="content">
+
+            </div>
+          </div>
+          <div class="slide sixth">
+            <div class="content">
+
+            </div>
+          </div>
+          <div class="slide seventh">
+            <div class="content">
+
+            </div>
+          </div>
       </div>
     </section>
     <section class="end__parallax section">
-      <h1 class="name">
-        Jennifer Larsson
-      </h1>
       <div class="parallax">
         <div class="parallax__layer parallax__layer--0">
           <img src="/images/layer_0.png"></img>
@@ -160,6 +186,9 @@
         </div>
         <div class="parallax__cover"></div>
       </div>
+      <h1 class="name">
+        Jennifer Larsson
+      </h1>
       <nav class="nav">
         <div class="menu">
           <div class="menu-buttons">
@@ -174,6 +203,8 @@
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script>
+  <script src="http://vjs.zencdn.net/5.3.0/video.js"></script>
+  <script type="text/javascript" src="/scripts/processing.js"></script>
 
   <!-- Include js plugin -->
   <script src="/scripts/script.js"></script>
