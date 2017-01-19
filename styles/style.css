@@ -126,7 +126,8 @@ h1.name {
 .contact-container {
   display: flex;
   flex-direction: column;
-  align-content: center;justify-content: center;
+  align-content: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -292,6 +293,7 @@ h1.name {
 .contact-me {
   height: 100vh;
   display: flex;
+  background: #F2EFEA;
 }
 
 .contact-me .right a{
