@@ -11,7 +11,7 @@ $(document).ready(function() {
     event.stopPropagation();
     event.preventDefault();
     $(this).addClass('displayed');
-    $(this).find('.content').slideDown(600).addClass('displayed');
+    $('.content').slideDown(600).addClass('displayed');
     $('.projects.section').addClass('displayed');
     $('.close').show();
     window.setTimeout(function() {

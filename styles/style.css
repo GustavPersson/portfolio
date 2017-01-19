@@ -1,5 +1,10 @@
 /* Reset Styles */
 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
 
 html {
   font-size: 12px;
@@ -19,8 +24,8 @@ body {
   padding: 0;
   width: 100%;
 	height: 100%;
-  font-weight: normal;
-  font-family: "Ubuntu";
+  font-weight: 100;
+  font-family: "San Francisco";
   color: #393939;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -28,9 +33,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    font-family: "Ubuntu";
+    font-family: "San Francisco";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: 100;
 }
 
 h1 {
@@ -42,7 +48,7 @@ h2 {
   text-transform: uppercase;
   font-size: 1.5em;
   margin-bottom: 30px;
-  font-weight: bold;
+  font-weight: 100;
 
 }
 
@@ -53,7 +59,7 @@ p {
 
 a, a:link, a:visited, a:hover {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 canvas {
@@ -63,20 +69,33 @@ canvas {
 h1.name {
   text-align: center;
   font-size: 10rem;
+  text-transform: uppercase;
 }
 
 .splash {
   height: 100vh;
   display: flex;
   background: black;
-  color: white;
+  color: black;
   flex-direction: column;
   justify-content: space-between;
   padding: 12px;
   position: relative;
-  background-color: #23231A;
+  background-color: #FFFDF8;
 }
 
+.splash .menu-buttons a {
+  color: black;
+}
+
+.logo-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logo {
+  max-width: 50%;
+}
 
 .splash--parallax {
   background-color: #FEDCC8;
@@ -84,7 +103,7 @@ h1.name {
 
 .about {
   height: 100vh;
-  background: #3D5A6C;
+  background: #F2EFEA;
   display: flex;
 }
 
@@ -104,6 +123,13 @@ h1.name {
   width: 160px;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;justify-content: center;
+  height: 100%;
+}
+
 .left {
   height: 100%;
   width: 50vw;
@@ -115,8 +141,13 @@ h1.name {
   position: relative;
 }
 
+.left__logo {
+  padding-top: 20px;
+}
+
 .projects .right,
-.about .right {
+.about .right,
+.contact-me .right {
   height: 100%;
   width: 50vw;
   flex: 0 0 50vw;
@@ -125,16 +156,24 @@ h1.name {
   position: relative;
 }
 
+.image-container {
+  max-width: 700px;
+}
+
+.cardholder{
+  width: 100%;
+}
+
 .background {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   max-height: 100vh;
   overflow: hidden;
 }
 
 .background .project--title {
-  position: absolute;
   top: 20px;
   z-index: 3;
   font-size: 72px;
@@ -191,7 +230,7 @@ h1.name {
 }
 
 .slide .background .background__image {
-  width: 100%;
+  width: 453px;
   transition: transform 6.6s ease-in-out;
 }
 
@@ -246,8 +285,21 @@ h1.name {
 
 .projects {
   height: 100vh;
-  background: FireBrick;
+  background: #F2EFEA;
   display: flex;
+}
+
+.contact-me {
+  height: 100vh;
+  display: flex;
+}
+
+.contact-me .right a{
+  color: black;
+}
+
+.contact-me .contact-container .fa-linkedin {
+  font-size: 24px;
 }
 
 .projects.displayed .nav {
@@ -294,6 +346,7 @@ h1.name {
 .projects .left {
   flex: 0 1 auto;
   transition: width .6s ease-in-out;
+  text-align: center;
 }
 
 .projects .right .section {

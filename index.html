@@ -31,8 +31,11 @@
     </section>
     <section class="about section">
       <div class="left">
-        <div>
-
+        <div></div>
+        <div class="logo-container">
+          <object type="image/svg+xml" data="/images/about_me.svg" class="logo">
+            About Me <!-- fallback image in CSS -->
+          </object>
         </div>
         <div class="face">
           <img src="/images/face.jpg" />
@@ -51,15 +54,18 @@
         <p>
           I'm a 24 year old interaction student att Malmö Högskola. I was born in the medium sized city of Lund, in Skåne.
           For the first years of my life I lived in Veberöd, and after High School I spent a few years travelling the world.
-          I'm now an Interaction Designer student at Malmö Högskola, studying my first semester. In this portfolio I have collected
-          the projects that I have been working on during this semester.
+          I'm now an Interaction Designer student at Malmö Högskola, studying my second year. In this portfolio I have collected
+          some of the projects that I have been working on during my studies.
         </p>
       </div>
     </section>
     <section class="projects section">
       <div class="left">
-        <div>
-
+        <div></div>
+        <div class="left__logo logo-container">
+          <object type="image/svg+xml" data="/images/portfolio.svg" class="logo">
+            Portfolio <!-- fallback image in CSS -->
+          </object>
         </div>
         <nav class="nav">
           <div class="menu">
@@ -87,7 +93,7 @@
           <div class="slide first">
             <div class="background">
               <h2 class="project--title">Remember</h2>
-              <img class="background__image" src="/images/remember." />
+              <img class="background__image" src="/images/kitchen.jpg" />
               <div class="more">
                 More
               </div>
@@ -96,14 +102,22 @@
             <div class="content">
               <article class="project">
                 <p>
-                  Lights was a project that focused on designing with tangiability, and during it we came up with a concept for a hub that controls
-                  the user's home lighting, together with a companion application that lets the user remotely turn the lights off.
+                  Remember was a project that focused on designing for automation in the smart home. We did a prototype with tangible interactions
+                  that were meant to manage automation in the smart home.
+                </p>
+                <p>
+                  The concept consisted of a screen connected to all smart applications in a user's home, as well as a special door handle. When the
+                  door handle was interacted with in a special way, the screen would display all connected smart devices that were not turned off,
+                  and the user could control them from the screen on the door.
+                </p>
+                <p>
+                  For the purpose of the project, we instead created a physical prototype that sounded an alarm from the forgotten devices.
                 </p>
                 <p>
                   We created the following video prototype to showcase the design.
                 </p>
                 <iframe id="ytplayer" type="text/html" width="640" height="360"
-                src="https://www.youtube.com/embed/754NgMEwpLw?autoplay=0"
+                src="https://www.youtube.com/embed/dPjcASpeyRE?autoplay=0"
                 frameborder="0"></iframe>
               </article>
             </div>
@@ -111,7 +125,7 @@
           <div class="slide second lights">
             <div class="background">
               <h2 class="project--title">Lights</h2>
-              <img class="background__image" src="/images/lights.jpeg" />
+              <img class="background__image" src="/images/lights2.png" />
               <div class="more">
                 More
               </div>
@@ -133,35 +147,83 @@
             </div>
           </div>
           <div class="slide third">
+            <div class="background">
+              <h2 class="project--title">Cardholder</h2>
+              <img class="background__image" src="/images/medlemskort_iphone.png" />
+              <div class="more">
+                More
+              </div>
+            </div>
             <div class="content">
               <article class="project">
+                <div class="image-container">
+                  <img src="/images/storyboard.png" class="cardholder"/>
+                  <img src="/images/MedlemskortHM2.jpg" class="cardholder"/>
+                  <img src="/images/addnewcard2.jpg" class="cardholder"/>
+                  <img src="/images/medlemskort2.jpg" class="cardholder"/>
+                  <img src="/images/scanner.jpg" class="cardholder"/>
+                  <img src="/images/zarameny2.jpg" class="cardholder"/>
+                </div>
+                <div>
+                  <p>
+                    During the Visual Communications course we got an assignment to create an App that used
+                    wearable technologies.
+                    <br>
+                    I decided to create a concept that took all of a user's membership cards
+                    and stored them all in one place, easily accessible through the user's phone.
+                    This allows for the user to not worry about carrying around all of their cards
+                    in their wallet, since most of them are commonly not used every day.
+                  </p>
+                  <p>
+                    The first step was to create the concept and to sketch it out. After that, I created a storyboard
+                    to display the flow of the application, and what the thought area of use is.
+                    The last step of this project was to create interface mock-ups with Illustrator and Photoshop.
+                  </p>
+                </div>
               </article>
-            </div>
-          </div>
-          <div class="slide fourth">
-            <div class="content">
-              <article class="project">
-              </article>
-            </div>
-          </div>
-          <div class="slide fifth">
-            <div class="content">
-
-            </div>
-          </div>
-          <div class="slide sixth">
-            <div class="content">
-
-            </div>
-          </div>
-          <div class="slide seventh">
-            <div class="content">
-
             </div>
           </div>
       </div>
     </section>
-    <section class="end__parallax section">
+    <section class="contact-me section">
+      <div class="left">
+        <div></div>        
+        <div class="logo-container">
+          <object type="image/svg+xml" data="/images/contact_me.svg" class="logo">
+            Contact Me <!-- fallback image in CSS -->
+          </object>
+        </div>
+        <!-- <div class="face">
+          <img src="/images/face.jpg" />
+        </div> -->
+        <nav class="nav">
+          <div class="menu">
+            <div class="menu-buttons">
+              <a href="#home" class="home-button">Start</a>
+              <a href="#about-me" class="about-me-button">About Me</a>
+              <a href="#project" class="project-button">Portfolio</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="right">
+        <div class="contact-container">
+          <p>
+            If you want to get in contact with me, here are a few different ways.
+          </p>
+          <p>
+            <a href="mailto:jennifer.m.larsson@gmail.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              jennifer.m.larsson@gmail.com
+            </a>
+          </p>
+          <div>
+            <a href="https://www.linkedin.com/in/jennifer-larsson-106428135/"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="end__parallax section">
       <div class="parallax">
         <div class="parallax__layer parallax__layer--0">
           <img src="/images/layer_0.png"></img>
@@ -198,7 +260,7 @@
           </div>
         </div>
       </nav>
-    </section>
+    </section> -->
   </div>
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
