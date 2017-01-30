@@ -609,7 +609,9 @@ font-size: 1.3rem;
     .h1.name {
 
     }
-
+    .more {
+      opacity: 1;
+    }
     .left {
       display: none;
     }
@@ -620,6 +622,10 @@ font-size: 1.3rem;
   and (-webkit-min-device-pixel-ratio: 1) {
     .projects .right, .about .right, .contact-me .right {
       flex: 1 1 auto;
+    }
+
+    .more {
+      opacity: 1;
     }
 
     .contact-me .right {
