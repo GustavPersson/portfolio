@@ -4,6 +4,7 @@ $(document).ready(function() {
     verticalCentered: false,
     scrollBar: true,
     autoScrolling: true,
+    responsiveWidth: 1024,
     anchors: ['home', 'about-me', 'project', 'end']
   });
 

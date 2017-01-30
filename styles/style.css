@@ -46,14 +46,14 @@ h1 {
 h2 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin-bottom: 30px;
   font-weight: 100;
 
 }
 
 p {
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: lighter;
 }
 
@@ -177,7 +177,7 @@ h1.name {
 .background .project--title {
   top: 20px;
   z-index: 3;
-  font-size: 72px;
+  font-size: 6rem;
   text-align: center;
   margin: 0 auto;
   background: #fefefe;
@@ -301,7 +301,7 @@ h1.name {
 }
 
 .contact-me .contact-container .fa-linkedin {
-  font-size: 24px;
+  font-size: 2rem;
 }
 
 .projects.displayed .nav {
@@ -361,7 +361,7 @@ h1.name {
   transform: translateX(50%);
   z-index: 8;
   top: 14px;
-  font-size: 32px;
+  font-size: 2.6rem;
   color: #23231A;
   cursor: pointer;
   color: maroon;
@@ -376,7 +376,7 @@ h1.name {
 }
 
 #contact a {
-font-size: 16px;
+font-size: 1.3rem;
 }
 
 .nav {
@@ -580,4 +580,90 @@ font-size: 16px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
     border-color: transparent #23231A transparent transparent;
+}
+
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .projects .right, .about .right, .contact-me .right {
+      flex: 1 1 auto;
+    }
+
+    .contact-me .right {
+      padding: 5rem;
+    }
+
+    .face {
+      position: absolute;
+      right: 50%;
+      top: 100%;
+      z-index: 2;
+    }
+
+    .face img {
+      transform: translateX(-50%) translateY(-100%);
+      position: absolute;
+    }
+
+    .h1.name {
+
+    }
+
+    .left {
+      display: none;
+    }
+}
+
+@media only screen
+  and (max-device-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .projects .right, .about .right, .contact-me .right {
+      flex: 1 1 auto;
+    }
+
+    .contact-me .right {
+      padding: 5rem;
+    }
+
+    .face {
+      position: absolute;
+      right: 50%;
+      top: 100%;
+      z-index: 2;
+    }
+
+    .background .project--title {
+      font-size: 4rem;
+    }
+
+    .about .right p {
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      background: rgba(255,255,255,0.85);
+      z-index: 3;
+    }
+
+    .face img {
+      transform: translateX(-50%) translateY(-100%);
+      position: absolute;
+    }
+
+    h1.name {
+      font-size: 5rem;
+    }
+
+    .left {
+      display: none;
+    }
+}
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .hide-large {
+      display: none !important;
+    }
 }
