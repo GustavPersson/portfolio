@@ -253,7 +253,6 @@ h1.name {
 }
 
 .slide .content {
-  overflow-x: scroll;
   display: none;
 }
 
