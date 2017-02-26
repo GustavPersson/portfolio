@@ -185,8 +185,6 @@ h1.name {
   position: relative;
 }
 
-
-
 .right p {
   max-width: 70%;
   margin: 0 auto;
@@ -379,6 +377,7 @@ h1.name {
   cursor: pointer;
   flex: 1 0 auto;
   transition: width .6s ease-in-out;
+  margin: 12px 0;
 }
 
 .projects .left {
