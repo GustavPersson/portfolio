@@ -1,13 +1,22 @@
 $(document).ready(function() {
-  $('.wrapper').fullpage({
-    normalScrollElements: '.projects .right, .project',
-    verticalCentered: false,
-    scrollBar: true,
-    autoScrolling: false,
-    responsiveWidth: 1024,
-    touchSensitivity: 25,
-    normalScrollElementTouchThreshold: 25,
-    anchors: ['home', 'project', 'about-me', 'end']
+  $('.home-button').click(function(event) {
+    $.scrollTo($('.splash'), 450, {
+      interrupt: true
+    });
+  });
+
+
+  $('.project-button').click(function(event) {
+    $.scrollTo($('.projects'), 450, {
+      interrupt: true
+    });
+  });
+
+
+  $('.about-me-button').click(function(event) {
+    $.scrollTo($('.about'), 450, {
+      interrupt: true
+    });
   });
 
 
@@ -33,8 +42,5 @@ $(document).ready(function() {
     $('.preview-container').show();
     $('.first').removeClass('displayed');
     $(this).hide();
-    window.setTimeout(function() {
-      $.fn.fullpage.reBuild();
-    }, 600);
   });
 });

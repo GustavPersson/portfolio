@@ -10,7 +10,6 @@ html {
   font-size: 12px;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -33,11 +32,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    font-family: "San Francisco";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 100;
+  margin-top: 0;
+  font-family: "San Francisco";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 100;
 }
 
 h1 {
@@ -57,7 +56,6 @@ h3{
   font-size: 1.4rem;
   margin-bottom: 30px;
   font-weight: 100;
-
 }
 
 p {
@@ -400,17 +398,18 @@ h1.name {
 }
 
 .close {
-  position: absolute;
+  position: fixed;
   display: none;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.3);
+  width: 60px;
+  background: rgba(255, 255, 255, 0.6);
   z-index: 8;
   top: 0;
   font-size: 2.6rem;
   color: #23231A;
   cursor: pointer;
   line-height: 3px;
-  height: 30px;
+  height: 60px;
+  padding: 14px;
 }
 
 .close.displayed {
@@ -573,6 +572,10 @@ font-size: 1.3rem;
       right: 50%;
       top: 100%;
       z-index: 2;
+    }
+
+    .projects.displayed {
+      height: auto;
     }
 
     .background .project--title {
