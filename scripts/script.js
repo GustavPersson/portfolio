@@ -3,11 +3,11 @@ $(document).ready(function() {
     normalScrollElements: '.projects .right, .project',
     verticalCentered: false,
     scrollBar: true,
-    autoScrolling: true,
+    autoScrolling: false,
     responsiveWidth: 1024,
     touchSensitivity: 25,
     normalScrollElementTouchThreshold: 25,
-    anchors: ['home', 'about-me', 'project', 'end']
+    anchors: ['home', 'project', 'about-me', 'end']
   });
 
   $('.slide').click(function(event) {
