@@ -23,50 +23,13 @@
         <div class="menu">
           <div class="menu-buttons">
             <a href="#home" class="home-button">Start</a>
-            <a href="#about-me" class="about-me-button">About Me</a>
             <a href="#project" class="project-button">Portfolio</a>
+            <a href="#about-me" class="about-me-button">About Me</a>
           </div>
         </div>
       </nav>
     </section>
-    <section class="about section">
-      <div class="left">
-        <div></div>
-        <div class="logo-container">
-          <object type="image/svg+xml" data="/images/about_me.svg" class="logo">
-            About Me <!-- fallback image in CSS -->
-          </object>
-        </div>
-        <div class="face">
-          <img src="/images/face.jpg" />
-        </div>
-        <nav class="nav">
-          <div class="menu">
-            <div class="menu-buttons">
-              <a href="#home" class="home-button">Start</a>
-              <a href="#about-me" class="about-me-button">About Me</a>
-              <a href="#project" class="project-button">Portfolio</a>
-              </div>
-          </div>
-        </nav>
-      </div>
-      <div class="right">
-        <div class="logo-container hide-large">
-          <object type="image/svg+xml" data="/images/about_me.svg" class="logo">
-            About Me <!-- fallback image in CSS -->
-          </object>
-        </div>
-        <div class="face hide-large">
-          <img src="/images/face.jpg" />
-        </div>
-        <p>
-          I'm a 25 year old interaction student att Malmö Högskola. I was born in the medium sized city of Lund, in Skåne.
-          For the first years of my life I lived in Veberöd, and after High School I spent a few years travelling the world.
-          I'm now an Interaction Designer student at Malmö Högskola, studying my second year. In this portfolio I have collected
-          some of the projects that I have been working on during my studies.
-        </p>
-      </div>
-    </section>
+
     <section class="projects section">
       <div class="left">
         <div></div>
@@ -89,7 +52,7 @@
             <div class="menu-buttons">
               <a href="#project/0" class="home-button">Remember</a>
               <a href="#project/1" class="about-me-button">Lights</a>
-              <a href="#project/2" class="project-button">project3</a>
+              <a href="#project/2" class="project-button">Cardholder</a>
               </div>
           </div>
         </nav>
@@ -109,10 +72,20 @@
 
             <div class="content">
               <article class="project">
-                <p>
-                  Remember was a project that focused on designing for automation in the smart home. We did a prototype with tangible interactions
-                  that were meant to manage automation in the smart home.
+                <p> This project was made in the course Tangible and
+                  Embodied Interaction within the field of Smart homes. The
+                  aim for this project was to identify a problem related to
+                  automation in the home and to build a prototype with
+                  tangible interactions that would help solve this problem.
+                  We started off by focusing on the issues existing with home
+                  security but ended up working on a reminder by the door to prevent the user forget their devices left on. Throughout the
+                  progress we had the interaction with a smart handle in mind
+                  and the functions it could provide but changed the concept
+                  around a few times. In the end we have created a new way
+                  of interacting with the door handle.
                 </p>
+                <img class="background__image" src="/images/malmouniversity.png" />
+
                 <p>
                   The concept consisted of a screen connected to all smart applications in a user's home, as well as a special door handle. When the
                   door handle was interacted with in a special way, the screen would display all connected smart devices that were not turned off,
@@ -120,7 +93,23 @@
                 </p>
                 <p>
                   For the purpose of the project, we instead created a physical prototype that sounded an alarm from the forgotten devices.
+                  To produce and develop our prototype we did research on
+                  which Arduino components to use and how those different
+                  components work, as well as which one suited our
+                  imagined prototype the best. We determined that the
+                  connection between the door handle and the coffee maker
+                  should be wireless and after researching wireless
+                  components the decision to use a 433 MHz radio
+                  transmitter and receiver with a range of up to seven meters.
+
+                  With these components we were able to clearly
+                  show the intended functionality.
+
+
                 </p>
+                <img class="background__image" src="/images/transmittorremember.png" />
+                <img class="background__image" src="/images/reciverremember.png" />
+
                 <p>
                   We created the following video prototype to showcase the design.
                 </p>
@@ -142,9 +131,20 @@
             <div class="content">
               <article class="project">
                 <p>
+                  During the course Tangible and embodied interaction, we had small projects were we created physical prototypes that include electronics
+                  and sensors. The goal of this project was to design a tangible interaction solution for an IOT enabled smart lamp and the
+                  design solution should address a specific domestic practice.
+                </p>
+                <p>
                   Lights was a project that focused on designing with tangiability, and during it we came up with a concept for a hub that controls
                   the user's home lighting, together with a companion application that lets the user remotely turn the lights off.
                 </p>
+                <p>
+                  The functionalities we have design are a multifunctional device which is placed in the hallway, this connects all of your chosen lamps and bulbs.
+                  Which in turn can be connected your choice of smart devices. You can connect all of the members in the family to the hub and a notification will be
+                  sent if the last person to leave have left all or some of the light on. This message will only be sent to that specific person. The GPS function in
+                   your smart device will calculate when your step out of the designated area around your home and only then send the notification.
+
                 <p>
                   We created the following video prototype to showcase the design.
                 </p>
@@ -165,14 +165,7 @@
             <div class="content">
               <article class="project">
                 <div class="image-container">
-                  <img src="/images/storyboard.png" class="cardholder"/>
-                  <img src="/images/MedlemskortHM2.jpg" class="cardholder"/>
-                  <img src="/images/addnewcard2.jpg" class="cardholder"/>
-                  <img src="/images/medlemskort2.jpg" class="cardholder"/>
-                  <img src="/images/scanner.jpg" class="cardholder"/>
-                  <img src="/images/zarameny2.jpg" class="cardholder"/>
-                </div>
-                <div>
+                  <img src="/images/storyboardcopy.png" class="cardholder"/>
                   <p>
                     During the Visual Communications course we got an assignment to create an App that used
                     wearable technologies.
@@ -187,10 +180,55 @@
                     to display the flow of the application, and what the thought area of use is.
                     The last step of this project was to create interface mock-ups with Illustrator and Photoshop.
                   </p>
+                  <img src="/images/MedlemskortHMportrait.png" class="cardholder"/>
+                  <!-- <img src="/images/addnewcard2.jpg" class="cardholder"/> -->
+                  <!-- <img src="/images/medlemskort2.jpg" class="cardholder"/> -->
+                  <img src="/images/medlemskortZaraportrait.png" class="cardholder"/>
+                  <img src="/images/medlemskortZaramenyportrait.png" class="cardholder"/>
+
+
                 </div>
               </article>
             </div>
           </div>
+      </div>
+    </section>
+    <section class="about section">
+      <div class="left">
+        <div></div>
+        <div class="logo-container">
+          <object type="image/svg+xml" data="/images/about_me.svg" class="logo">
+            About Me <!-- fallback image in CSS -->
+          </object>
+        </div>
+        <div class="face">
+          <img src="/images/face.jpg" />
+        </div>
+        <nav class="nav">
+          <div class="menu">
+            <div class="menu-buttons">
+              <a href="#home" class="home-button">Start</a>
+              <a href="#about-me" class="about-me-button">About Me</a>
+              <a href="#project" class="project-button">Projects</a>
+              </div>
+          </div>
+        </nav>
+      </div>
+      <div class="right">
+        <div class="logo-container hide-large">
+          <object type="image/svg+xml" data="/images/about_me.svg" class="logo">
+            About Me <!-- fallback image in CSS -->
+          </object>
+        </div>
+        <div class="face hide-large">
+          <img src="/images/face.jpg" />
+        </div>
+        <p>
+          I'm a 25 year old interaction student att Malmö Högskola. I was born in the medium sized city of Lund, in Skåne.
+          For the first years of my life I lived in Veberöd, and after High School I spent a few years travelling the world.
+          I'm now an Interaction Designer student at Malmö Högskola, studying my second year. In this portfolio I have collected
+          some of the projects that I have been working on during my studies.
+        </p>
       </div>
     </section>
     <section class="contact-me section">
@@ -228,7 +266,7 @@
             </a>
           </p>
           <div>
-            <a href="https://www.linkedin.com/in/jennifer-larsson-106428135/"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+            <a href="https://www.linkedin.com/in/jennifer-larsson-106428135/"> <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
           </div>
         </div>
       </div>
