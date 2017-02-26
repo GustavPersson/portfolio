@@ -10,25 +10,28 @@ $(document).ready(function() {
     anchors: ['home', 'project', 'about-me', 'end']
   });
 
-  $('.slide').click(function(event) {
+
+  $('.preview').click(function(event) {
     event.stopPropagation();
     event.preventDefault();
-    $(this).addClass('displayed');
+
+    var target = $(this).children('.target').data('target');
+
+    $('.preview-container').hide();
+    $('.project-container.' + target).addClass('displayed');
     $('.content').slideDown(600).addClass('displayed');
     $('.projects.section').addClass('displayed');
     $('.close').show();
-    window.setTimeout(function() {
-      $.fn.fullpage.reBuild();
-    }, 600);
-
   });
 
   $('.close').click(function(event) {
     event.stopPropagation();
     event.preventDefault();
-    $('.slide.displayed').removeClass('displayed');
+    $('.project-container.displayed').removeClass('displayed');
     $('.content.displayed').slideUp(400).removeClass('displayed');
     $('.projects.section').removeClass('displayed');
+    $('.preview-container').show();
+    $('.first').removeClass('displayed');
     $(this).hide();
     window.setTimeout(function() {
       $.fn.fullpage.reBuild();
