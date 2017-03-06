@@ -834,7 +834,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     flex: 1 1 auto;
   }
 
-  .contact-me .right {
+  .contact-me .right .contact-container {
     padding: 5rem;
   }
 
