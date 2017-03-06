@@ -805,14 +805,13 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media only screen
 and (max-device-width: 768px)
 and (-webkit-min-device-pixel-ratio: 1) {
-
-
   .projects .right, .about .right, .contact-me .right {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -moz-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    padding: 8px;
   }
 
   .projects .right {
@@ -881,6 +880,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   .left {
     display: none;
+  }
+
+  .nav a {
+    margin: 0 5px;
   }
 }
 
