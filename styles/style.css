@@ -754,6 +754,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     padding: 5rem;
   }
 
+  .contact-me .right {
+    overflow: hidden;
+  }
+
   .face {
     position: absolute;
     right: 50%;
@@ -792,6 +796,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media only screen
 and (max-device-width: 768px)
 and (-webkit-min-device-pixel-ratio: 1) {
+
+
   .projects .right, .about .right, .contact-me .right {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -801,6 +807,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
   }
 
   .projects .right {
+    overflow: hidden;
+  }
+
+  .contact-me .right {
     overflow: hidden;
   }
 
