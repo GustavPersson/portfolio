@@ -175,10 +175,13 @@ h1.name {
   display: flex;
 }
 
+.about .left {
+  background: #F2EFEA;
+}
+
 .about .right {
   padding: 94px;
 }
-
 
 .face {
   position: absolute;
@@ -555,6 +558,7 @@ h1.name {
 .contact-me .right a {
   color: black;
   z-index: 2;
+  font-size: 1.4rem;
 }
 
 .contact-me .right > div {
@@ -565,8 +569,12 @@ h1.name {
   z-index: 2;
 }
 
-.contact-me .contact-container .fa-linkedin {
+.contact-me .contact-container .fa {
   font-size: 2rem;
+}
+
+.contact-me .contact-container .fa-linkedin {
+  font-size: 2.5rem;
 }
 
 .projects.displayed {
