@@ -1,4 +1,5 @@
 /* Reset Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 @font-face {
   font-family: "San Francisco";
@@ -29,7 +30,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   font-weight: 100;
-  font-family: "San Francisco";
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   color: #393939;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -37,7 +38,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-family: "San Francisco";
+  font-family: "San Francisco", 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 100;
@@ -111,11 +112,23 @@ h1.name {
   padding: 12px;
   position: relative;
   background-color: #FFFDF8;
-  background: url('/images/splash.jpg') center/100%;
+  background: url('/images/splash.png') center/100%;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+}
+
+.splash::after {
+  content: "";
+  opacity: 0.5;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .splash hgroup {
@@ -805,6 +818,20 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media only screen
 and (max-device-width: 768px)
 and (-webkit-min-device-pixel-ratio: 1) {
+  .splash,
+  .about {
+    max-height: none;
+    height: auto;
+  }
+
+  .projects {
+    min-height: 568px;
+  }
+
+  h1 {
+    margin-top: 25px;
+  }
+
   .projects .right, .about .right, .contact-me .right {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -858,7 +885,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
   }
 
   .about .right p {
-    position: absolute;
+    position: relative;
     left: 4px;
     right: 4px;
     background: rgba(255,255,255,0.85);
@@ -882,8 +909,18 @@ and (-webkit-min-device-pixel-ratio: 1) {
     display: none;
   }
 
+  .menu-buttons {
+    text-align: center;
+  }
+
   .nav a {
     margin: 0 5px;
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    line-height: 1rem;
+    font-size: 1.5rem;
   }
 }
 
