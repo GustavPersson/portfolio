@@ -218,6 +218,7 @@ h1.name {
   -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
+  padding: 18px;
 }
 
 .left {
@@ -275,6 +276,7 @@ h1.name {
 }
 
 .contact-me .right p {
+  z-index: 2;
   margin: 0;
 }
 
@@ -440,6 +442,9 @@ h1.name {
 
 .preview .header {
   background: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
 
 }
 
@@ -529,8 +534,35 @@ h1.name {
   background: #F2EFEA;
 }
 
-.contact-me .right a{
+.contact-me .right{
+  position: relative;
+  display: block;
+  background: url('/images/notebook.jpg') center/100%;
+  background-size: cover;
+}
+.contact-me .right::after {
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-me .right a {
   color: black;
+  z-index: 2;
+}
+
+.contact-me .right > div {
+  z-index: 2;
+}
+
+.contact-me .right > div > * {
+  z-index: 2;
 }
 
 .contact-me .contact-container .fa-linkedin {
