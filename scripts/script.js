@@ -19,6 +19,13 @@ $(document).ready(function() {
     });
   });
 
+  $('.contact-button').click(function(event) {
+    $.scrollTo($('.contact-me'), 450, {
+      interrupt: true
+    });
+  });
+
+
   $('.preview').click(function(event) {
     event.stopPropagation();
     event.preventDefault();
@@ -39,7 +46,7 @@ $(document).ready(function() {
         height = projectElement.height();
 
 
-    if(window.outerWidth > 768) {          
+    if(window.outerWidth > 768) {
       projectElement.bind('mousewheel', function(e, d) {
         var scrollHeight = $(e.currentTarget)[0].scrollHeight;
         if((this.scrollTop === (scrollHeight - height) && d < 0) || (this.scrollTop === 0 && d > 0)) {
