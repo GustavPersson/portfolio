@@ -1,4 +1,5 @@
 /* Reset Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 @font-face {
   font-family: "San Francisco";
@@ -29,7 +30,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   font-weight: 100;
-  font-family: "San Francisco";
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   color: #393939;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -37,14 +38,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-family: "San Francisco";
+  font-family: "San Francisco", 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 100;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.7rem;
+  margin-top: 120px;
 }
 
 h2 {
@@ -61,6 +63,9 @@ h3 {
   margin-bottom: 0px;
   margin-top: 20px;
   font-weight: 100;
+}
+h4 {
+  font-size: 2.4rem;
 }
 
 p {
@@ -107,11 +112,23 @@ h1.name {
   padding: 12px;
   position: relative;
   background-color: #FFFDF8;
-  background: url('/images/splash.jpg') center/100%;
+  background: url('/images/splash.png') center/100%;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+}
+
+.splash::after {
+  content: "";
+  opacity: 0.5;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .splash hgroup {
@@ -158,10 +175,13 @@ h1.name {
   display: flex;
 }
 
+.about .left {
+  background: #F2EFEA;
+}
+
 .about .right {
   padding: 94px;
 }
-
 
 .face {
   position: absolute;
@@ -201,6 +221,7 @@ h1.name {
   -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
+  padding: 18px;
 }
 
 .left {
@@ -258,6 +279,7 @@ h1.name {
 }
 
 .contact-me .right p {
+  z-index: 2;
   margin: 0;
 }
 
@@ -422,7 +444,15 @@ h1.name {
 }
 
 .preview .header {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.preview .header h4 {
+  font-size: 2.9rem;
 }
 
 .preview > .overlay {
@@ -507,12 +537,44 @@ h1.name {
   background: #F2EFEA;
 }
 
-.contact-me .right a{
+.contact-me .right{
+  position: relative;
+  display: block;
+  background: url('/images/notebook.jpg') center/100%;
+  background-size: cover;
+}
+.contact-me .right::after {
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-me .right a {
   color: black;
+  z-index: 2;
+  font-size: 1.4rem;
+}
+
+.contact-me .right > div {
+  z-index: 2;
+}
+
+.contact-me .right > div > * {
+  z-index: 2;
+}
+
+.contact-me .contact-container .fa {
+  font-size: 2rem;
 }
 
 .contact-me .contact-container .fa-linkedin {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .projects.displayed {
@@ -754,6 +816,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     padding: 5rem;
   }
 
+  .contact-me .right {
+    overflow: hidden;
+  }
+
   .face {
     position: absolute;
     right: 50%;
@@ -792,15 +858,34 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media only screen
 and (max-device-width: 768px)
 and (-webkit-min-device-pixel-ratio: 1) {
+  .splash,
+  .about {
+    max-height: none;
+    height: auto;
+  }
+
+  .projects {
+    min-height: 568px;
+  }
+
+  h1 {
+    margin-top: 25px;
+  }
+
   .projects .right, .about .right, .contact-me .right {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -moz-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    padding: 8px;
   }
 
   .projects .right {
+    overflow: hidden;
+  }
+
+  .contact-me .right {
     overflow: hidden;
   }
 
@@ -816,7 +901,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     flex: 1 1 auto;
   }
 
-  .contact-me .right {
+  .contact-me .right .contact-container {
     padding: 5rem;
   }
 
@@ -840,7 +925,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
   }
 
   .about .right p {
-    position: absolute;
+    position: relative;
     left: 4px;
     right: 4px;
     background: rgba(255,255,255,0.85);
@@ -862,6 +947,20 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   .left {
     display: none;
+  }
+
+  .menu-buttons {
+    text-align: center;
+  }
+
+  .nav a {
+    margin: 0 5px;
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    line-height: 1rem;
+    font-size: 1.5rem;
   }
 }
 
