@@ -329,6 +329,7 @@ h1.name {
 .right .contact-container .text-container {
   margin: 0 auto;
   width: 587px;
+  max-width: 100%;
 }
 
 .image-container {
