@@ -100,6 +100,12 @@ h1.name {
   text-transform: uppercase;
 }
 
+@media all and (max-width: 568px) {
+  h1.name {
+    font-size: 5rem;
+  }
+}
+
 .splash {
   height: 100vh;
   display: flex;
@@ -113,6 +119,18 @@ h1.name {
   background: url("/images/header.png") center/100%;
   background-size: cover;
   position: relative;
+}
+
+@media all and (max-width: 812px) {
+  .splash {
+    height: auto;
+  }
+}
+
+@media all and (max-width: 568px) {
+  .splash {
+    height: auto;
+  }
 }
 
 .splash::after {
@@ -531,6 +549,12 @@ h1.name {
 @media all and (max-width: 812px) {
   .nav {
     font-size: 1.1em;
+  }
+}
+
+@media all and (max-width: 568px) {
+  .nav {
+    font-size: 0.9em;
   }
 }
 
