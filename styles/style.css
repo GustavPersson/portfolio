@@ -171,6 +171,7 @@ h1.name {
 
 .splash .menu-buttons a {
   color: black;
+  white-space: nowrap;
 }
 
 .logo-container {
@@ -238,6 +239,10 @@ h1.name {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: auto;
+  }
+
+  .projects.section {
     height: auto;
   }
 
