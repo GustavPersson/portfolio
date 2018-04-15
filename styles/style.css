@@ -506,7 +506,7 @@ h1.name {
 }
 
 .contact-me {
-  height: 100vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,6 +518,7 @@ h1.name {
   display: block;
   background: url("/images/notebook.jpg") center/100%;
   background-size: cover;
+  padding-bottom: 10vh;
 }
 .contact-me .right::after {
   content: "";
