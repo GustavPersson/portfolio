@@ -161,7 +161,7 @@ h1.name {
   top: 0;
   height: 100%;
   width: 100%;
-  margin: -12px;
+  margin-left: -12px;
 }
 
 .splash .nav {
